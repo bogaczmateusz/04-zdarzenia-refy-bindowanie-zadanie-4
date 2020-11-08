@@ -26,7 +26,7 @@ function Summary({ expenses, incomes }) {
     }, [expenses, incomes]);
 
     return (
-        <div className="expense-calculator-summary" ref={summaryContainer}>Suma: <span>{amount}zł</span></div>
+        <div className="expense-calculator-summary" ref={summaryContainer}>Suma: <span>{Math.round(amount * 100) / 100}zł</span></div>
     )
 }
 

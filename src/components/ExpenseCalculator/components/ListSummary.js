@@ -16,7 +16,7 @@ function ListSummary({ data }) {
         setSum(calculate(data));
     }, [data]);
 
-    return <div className="expense-calculator-column-summary"><span>{sum}zł</span></div>;
+    return <div className="expense-calculator-column-summary"><span>{Math.round(sum * 100) / 100}zł</span></div>;
 }
 
 export default ListSummary;

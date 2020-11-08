@@ -13,7 +13,7 @@ function ListItem(props) {
         <li>
             <div className="expense-calculator-item">
                 <h5 className="expense-calculator-item-headline">{headline}<small>tagi: {tags}</small></h5>
-                <p className="expense-calculator-item-amount">{amount}</p>
+                <p className="expense-calculator-item-amount">{Math.round(amount * 100) / 100}</p>
                 <button type="button" className="expense-calculator-item-remove" onClick={() => removeHandler(props.id, props.isExpense, props.isIncome)}><FontAwesomeIcon icon={['fas', 'times-circle']} /></button>
             </div>
         </li>
